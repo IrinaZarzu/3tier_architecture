@@ -1,0 +1,35 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "logs.amazonaws.com"
+      },
+      "Action": "s3:PutObject",
+      "Resource": "arn:aws:s3:::my-cloudwatch-logs-bucket/*",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "your-account-id"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:logs:your-region:your-account-id:log-group:/aws/elb/my-alb:*"
+        }
+      }
+    },
+    {
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "s3:*",
+      "Resource": [
+        "arn:aws:s3:::my-cloudwatch-logs-bucket",
+        "arn:aws:s3:::my-cloudwatch-logs-bucket/*"
+      ],
+      "Condition": {
+        "Bool": {
+          "aws:SecureTransport": "false"
+        }
+      }
+    }
+  ]
+}
