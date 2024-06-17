@@ -7,8 +7,8 @@
             "Principal": "*",
             "Action": "s3:*",
             "Resource": [
-                "arn:aws:s3:::my3tierwebappbucket-89ufh84",
-                "arn:aws:s3:::my3tierwebappbucket-89ufh84/*"
+                "arn:aws:s3:::YOUR S3 Bucket name",
+                "arn:aws:s3:::YOUR S3 Bucket name/*"
             ],
             "Condition": {
                 "StringEquals": {
