@@ -16,7 +16,7 @@
             ],
             "Condition": {
                 "StringEquals": {
-                    "aws:SourceVpc": "vpc-032bb0b22b309083c"
+                    "aws:SourceVpc": YOUR VPC ID"
                 }
             }
         }
