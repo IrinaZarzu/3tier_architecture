@@ -4,6 +4,7 @@
 
 
 This repository contains the infrastructure setup for an e-commerce website using a 3-tier architecture on AWS. The setup includes a web application tier, an application tier, and a data tier, ensuring high availability, scalability, and security.
+For more information, you can access the blog post [here](https://medium.com/@irinazarzu/aws-3-tier-web-architecture-8310ad0d815a) .
 
 ## Project Overview
 
